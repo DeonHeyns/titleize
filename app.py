@@ -6,7 +6,7 @@ import bottle
 from bottle import route, get, view, static_file
 import inflection
 
-bottle.debug(True)
+bottle.debug(False)
 
 
 @route("/resources/<filepath:path>")

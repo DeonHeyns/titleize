@@ -4,7 +4,7 @@
 from sys import argv
 import bottle
 from bottle import route, get, view, static_file
-import inflection
+from titlecase import titlecase
 
 bottle.debug(False)
 
@@ -22,7 +22,7 @@ def index():
 def titleize(word):
     result = word
     try:
-        result = inflection.titleize(word)
+        result = titlecase(word)
     except Exception, e:
         print(e)
     return result
